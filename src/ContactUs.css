@@ -1,0 +1,125 @@
+/* ContactUs.css */
+
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Section Styling */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Contact Header */
+.contact-header {
+  background: #0077cc;
+  color: white;
+  padding: 80px 20px;
+}
+
+.contact-header h1 {
+  font-size: 42px;
+}
+
+/* Contact Information */
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.contact-details {
+  width: 30%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h2 {
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+/* Founders Section */
+.founders {
+  background: #eef2f7;
+}
+
+.founders-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.founder {
+  width: 30%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.founder h3 {
+  color: #005fa3;
+}
+
+/* Expandable About Section */
+.about-expandable {
+  background: #f8f9fa;
+  padding: 40px;
+}
+
+.expand-btn {
+  padding: 12px 24px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.expand-btn:hover {
+  background: #005fa3;
+  transform: scale(1.05);
+}
+
+.expanded-text {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: auto;
+  text-align: justify;
+}
+
+/* Footer */
+.footer {
+  background: #003d66;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .contact-info,
+  .founders-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-details,
+  .founder {
+    width: 80%;
+  }
+}

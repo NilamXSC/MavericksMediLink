@@ -1,0 +1,99 @@
+/* AboutUs.css */
+
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Section Styling */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* About Us Header */
+.about-header {
+  background: #0077cc;
+  color: white;
+  padding: 80px 20px;
+}
+
+.about-header h1 {
+  font-size: 42px;
+}
+
+/* How We Work Section */
+.how-we-work {
+  background: #eef2f7;
+}
+
+.work-steps {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.step {
+  width: 30%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.step:hover {
+  transform: scale(1.05);
+}
+
+/* Get Started Section */
+.get-started {
+  background: #f8f9fa;
+}
+
+.get-steps {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.step-box {
+  width: 30%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step-box:hover {
+  transform: scale(1.05);
+}
+
+/* FAQ Section */
+.faq {
+  background: #0077cc;
+  color: white;
+}
+
+.faq-item {
+  width: 70%;
+  margin: auto;
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact-section {
+  background: #003d66;
+  color: white;
+  padding: 40px;
+}
