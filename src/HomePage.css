@@ -1,103 +1,305 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
+/* HomePage.css */
+
+/* Reset Styles */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  box-sizing: border-box;
+}
+
+/* Section Styling */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Full-Screen Background Image */
+.homepage {
+  position :absolute;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Semi-Transparent Background Overlay */
+.homepage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* 40% opacity */
+  z-index: -1;
 }
 
 /* Navbar */
 .navbar {
-  background: #007bff;
-  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.navbar .logo {
+  padding: 15px 30px;
+  background-color: #0077cc;
   color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo */
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-.nav-links a {
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: background 0.3s, border-radius 0.3s, transform 0.2s;
+}
+
+.nav-links li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transform: scale(1.05);
 }
 
 /* Hero Section */
 .hero {
-  position: relative;
-  background: url("./assets/background.jpg") center/cover no-repeat;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  color: white;
-}
-
-.hero .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.hero-content {
+  padding: 160px 20px;
+  color: whitesmoke;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
-  max-width: 600px;
+  z-index: 2;
+  animation: fadeInUp 1.2s ease-out forwards;
 }
 
-.cta-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #ff9800;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
+/* Hero Title */
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Hero Paragraph */
+.hero p {
+  font-size: 22px;
   margin-top: 10px;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Fade-in & Slide-up Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Features Section */
 .features {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.feature-container {
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 20px;
+  flex-wrap: wrap;
 }
 
 .feature-box {
   background: white;
   padding: 20px;
   border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 30%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature-box h2 {
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* How It Works Section */
+.how-it-works {
+  background: #eef2f7;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.step {
+  width: 30%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.step:hover {
+  transform: scale(1.05);
+}
+
+/* Why Choose Us Section */
+.why-choose {
+  background-color: #f8f9fa;
+}
+
+.why-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.why-box {
+  width: 30%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.why-box:hover {
+  transform: scale(1.05);
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: #0077cc;
+  color: white;
+}
+
+.testimonial-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial-box {
+  width: 30%;
+  background: white;
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alternate-style {
+  background: #003d66;
+  color: white;
 }
 
 /* Call to Action */
-.cta-section {
+.cta {
+  background: #005fa3;
+  color: white;
+  padding: 60px 20px;
   text-align: center;
-  padding: 50px 20px;
 }
 
+.cta-btn {
+  padding: 12px 24px;
+  background: white;
+  color: #0077cc;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cta-btn:hover {
+  background: #f8f9fa;
+  transform: scale(1.05);
+}
+
+/* Footer */
 .footer {
-  background: #333;
+  background: #003d66;
   color: white;
+  padding: 20px;
   text-align: center;
-  padding: 15px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .features,
+  .steps,
+  .why-boxes,
+  .testimonial-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-box,
+  .step,
+  .why-box,
+  .testimonial-box {
+    width: 80%;
+  }
 }
